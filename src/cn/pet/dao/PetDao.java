@@ -35,7 +35,7 @@ public class PetDao {
         return count;
     }
 
-    // 2. 获取【指定页码】的数据 (替换掉原来那个查所有的方法)
+    // 2. 获取【指定页码】的数据
     public List<Pet> getPetListByPage(int currPage, int pageSize) {
         List<Pet> list = new ArrayList<>();
         Connection conn = null;
