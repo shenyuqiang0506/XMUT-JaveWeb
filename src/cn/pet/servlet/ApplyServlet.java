@@ -17,10 +17,9 @@ import cn.pet.entity.User;
 public class ApplyServlet extends HttpServlet {
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // 1. 设置编码
-        request.setCharacterEncoding("UTF-8");
+
         
-        // 2. 权限验证：确保用户已登录
+        // 权限验证：确保用户已登录
         HttpSession session = request.getSession();
         User currUser = (User) session.getAttribute("currUser");
         
@@ -30,20 +29,20 @@ public class ApplyServlet extends HttpServlet {
             return;
         }
         
-        // 3. 获取表单数据
+        // 获取表单数据
         String petIdStr = request.getParameter("petId");
         String reason = request.getParameter("reason");
         
         if (petIdStr != null && !petIdStr.isEmpty()) {
             int petId = Integer.parseInt(petIdStr);
             
-            // 4. 封装对象并保存
+            // 封装对象并保存
             Apply apply = new Apply(currUser.getId(), petId, reason);
             ApplyDao applyDao = new ApplyDao();
             boolean success = applyDao.saveApply(apply);
             
             if (success) {
-                // 5. 成功，跳转到“我的申请记录”页面
+                // 成功，跳转到“我的申请记录”页面
                 response.sendRedirect("myApplyServlet"); 
             } else {
                 // 失败处理

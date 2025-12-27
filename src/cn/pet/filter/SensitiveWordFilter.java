@@ -43,7 +43,9 @@ public class SensitiveWordFilter implements Filter {
     }
 
     @Override
-    public void destroy() {}
+    public void destroy() {
+    }
+
     class MyRequestWrapper extends HttpServletRequestWrapper {
         public MyRequestWrapper(HttpServletRequest request) {
             super(request);

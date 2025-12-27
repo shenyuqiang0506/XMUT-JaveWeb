@@ -26,7 +26,7 @@ import cn.pet.entity.User;
 public class PublishServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
+
 
         // 1. 权限验证
         HttpSession session = request.getSession();

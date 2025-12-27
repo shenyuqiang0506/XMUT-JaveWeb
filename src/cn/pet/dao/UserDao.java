@@ -33,7 +33,7 @@ public class UserDao {
 
             rs = pstmt.executeQuery();
 
-            // 如果查到了数据，封装成 User 对象
+            // 封装成 User 对象
             if (rs.next()) {
                 user = new User();
                 user.setId(rs.getInt("id"));

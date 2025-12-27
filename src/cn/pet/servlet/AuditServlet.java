@@ -20,10 +20,6 @@ import cn.pet.entity.User;
 public class AuditServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // 1. 设置请求编码
-        request.setCharacterEncoding("UTF-8");
-        // 2. 设置响应编码
-        response.setContentType("text/html;charset=UTF-8");
 
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("currUser");
