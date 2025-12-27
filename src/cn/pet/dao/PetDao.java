@@ -12,7 +12,7 @@ import cn.pet.util.DBUtil;
 
 public class PetDao {
 
-    // 1. 获取【待领养】宠物的总记录数 (用于计算总页数)
+    //获取【待领养】宠物的总记录数
     public int getPetCount() {
         int count = 0;
         Connection conn = null;

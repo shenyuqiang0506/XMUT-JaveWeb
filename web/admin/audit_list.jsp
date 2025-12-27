@@ -70,6 +70,7 @@
 
         <div class="card-body p-0">
             <form action="${pageContext.request.contextPath}/auditServlet" method="post" id="batchForm">
+                <%--隐藏域--%>
                 <input type="hidden" name="action" value="batchAuditPet">
                 <input type="hidden" name="result" id="batchResult">
                 <table class="table table-hover align-middle mb-0">
