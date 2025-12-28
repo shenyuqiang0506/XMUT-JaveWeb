@@ -76,7 +76,7 @@
             <div class="mb-4">
                 <label class="form-label fw-bold text-secondary">验证码</label>
                 <div class="d-flex">
-                    <input type="text" name="captcha" class="form-control me-2" placeholder="区分大小写" required
+                    <input type="text" name="captcha" class="form-control me-2" placeholder="不区分大小写" required
                            style="width: 140px;">
                     <img src="captchaServlet" id="captchaImg"
                          onclick="this.src='captchaServlet?t=' + new Date().getTime()"

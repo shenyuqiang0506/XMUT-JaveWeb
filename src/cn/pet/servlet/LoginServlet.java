@@ -17,7 +17,7 @@ public class LoginServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        // --- 1. 验证码校验逻辑---
+        // 1. 验证码校验逻辑
         String userCaptcha = request.getParameter("captcha");
         HttpSession session = request.getSession();
         String trueCaptcha = (String) session.getAttribute("CHECK_CODE_KEY");
@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
             request.getRequestDispatcher("login.jsp").forward(request, response);
             return;
         }
-        // 2. 原有的登录逻辑
+        // 2. 登录逻辑
         String uName = request.getParameter("username");
         String pWord = request.getParameter("password");
 
